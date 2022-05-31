@@ -34,80 +34,24 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
   <!-- Insert customization below, sample provided: -->
 
-  <link name="realsesne_pole_link">
+  <link name="bowler_link">
     <visual>
       <geometry>
-        <box size="0.02 0.02 0.2" rpy="0 0 0"/>
+        <mesh filename="package://husky_custom_description/meshes/red_bowler.dae" />
       </geometry>
     </visual>
     <collision>
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
       <geometry>
-        <box size="0.02 0.02 0.2" rpy="0 0 0"/>
+        <box size="0.32 0.25 0.14" rpy="0 0 0"/>
       </geometry>
     </collision>
   </link>
 
-  <joint name="realsesne_pole_joint" type="fixed">
+  <joint name="bowler_joint" type="fixed">
     <parent link="top_plate_link" />
-    <child link="realsesne_pole_link" />
-    <origin xyz="0.2 0 0" rpy="0 0 0" />
-  </joint>
-
-  <link name="lidar_pole_link">
-    <visual>
-      <geometry>
-        <box size="0.02 0.02 0.3" rpy="0 0 0"/>
-      </geometry>
-    </visual>
-    <collision>
-      <geometry>
-        <box size="0.02 0.02 0.3" rpy="0 0 0"/>
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="lidar_pole_joint" type="fixed">
-    <parent link="top_plate_link" />
-    <child link="lidar_pole_link" />
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
-
-  <link name="gps_link">
-    <visual>
-      <geometry>
-        <box size="0.02 0.02 0.02" rpy="0 0 0"/>
-      </geometry>
-    </visual>
-    <collision>
-      <geometry>
-        <box size="0.02 0.02 0.02" rpy="0 0 0"/>
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="gps_joint" type="fixed">
-    <parent link="top_plate_link" />
-    <child link="gps_link" />
-    <origin xyz="-0.1 0 0" rpy="0 0 0" />
-  </joint>
-
-  <link name="imu_link">
-    <visual>
-      <geometry>
-        <box size="0.02 0.02 0.02" rpy="0 0 0"/>
-      </geometry>
-    </visual>
-    <collision>
-      <geometry>
-        <box size="0.02 0.02 0.02" rpy="0 0 0"/>
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="imu_joint" type="fixed">
-    <parent link="top_plate_link" />
-    <child link="imu_link" />
-    <origin xyz="-0.15 0 0" rpy="0 0 0" />
+    <child link="bowler_link" />
+    <origin xyz="0.1 -0.1 0" rpy="0 0 0.5" />
   </joint>
 
 </robot>
