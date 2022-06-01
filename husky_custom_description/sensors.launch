@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <launch>
 
-  # roslaunch husky_control .launch 
-  <include file="$(find husky_control)/launch/teleop.launch" />
-
   # roslaunch ublox_gps ublox_holybro.launch node_name:=gps 
   <include file="$(find ublox_gps)/launch/ublox_holybro.launch" />
   
